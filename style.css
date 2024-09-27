@@ -255,6 +255,23 @@ form {
   color: #000000;
 }
 
+.weather__forecast {
+  max-height: 345px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.weather__forecast::-webkit-scrollbar {
+  width: 8px;
+}
+
+.weather__forecast::-webkit-scrollbar-thumb {
+  background-color: #7BA7AB;
+  border-radius: 4px;
+}
+
+
+
 .tabs {
   width: 296px;
   height: 45px;
@@ -305,3 +322,4 @@ form {
 #tab_03:not(:target) ~ .tabs__items a[href="#tab_03"] {
   background: #A3D0C3;
 }
+
