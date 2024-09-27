@@ -8,11 +8,48 @@
 	<title>Weather</title>
 </head>
 <body>
+	<div class="box">
 <div class="weather">
 	<form>
-		<input type="text" placeholder="Искать здесь...">
+		<input type="text" placeholder="Search">
 		<button type="submit">&#128269;</button>
-		</form>
+	</form>
+	<div class="container">
+		<div class="tab">
+
+			<div class="weather__block" id="tab_01">
+				<p class="weather__block-temp">14°</p>
+				<img class="weather__block-icon" src="" alt="cloud">
+				<div class="weather__block-content">
+					<p class="weather__block-content-city">Aktobe</p>
+					<img class="weather__block-content-like" src="" alt="like">
+				</div>
+			</div>
+
+			<div class="weather__block weather__details" id="tab_02">
+				<p>2</p>
+
+			</div>
+
+			<div class="weather__block weather__forecast" id="tab_03">
+				<p>3</p>
+			</div>
+
+			<nav class="tabs__items">
+				<a href="#tab_01" class="tabs__item"><span class="tabs__item-color">Now</a>
+				<a href="#tab_02" class="tabs__item"><span>Details</span></a>
+				<a href="#tab_03" class="tabs__item"><span>Forecast</span></a>
+			</nav>
+		</div>
+		<div class="weather__location">
+			<div class="weather__location-add">
+				<p>Added Locations:</p>
+			</div>
+			<div class="weather__location-save">
+				<p>Samara</p>
+				</div>
+		</div>
+	</div>
 </div>
 	<script src="./script.js" defer></script>
 </body>
