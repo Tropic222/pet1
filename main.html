@@ -11,7 +11,7 @@
 	<div class="box">
 <div class="weather">
 	<form>
-		<input type="text" placeholder="Search">
+		<input type="text" placeholder="Искать здесь...">
 		<button type="submit">&#128269;</button>
 	</form>
 	<div class="container">
@@ -19,20 +19,78 @@
 
 			<div class="weather__block" id="tab_01">
 				<p class="weather__block-temp">14°</p>
-				<img class="weather__block-icon" src="" alt="cloud">
+				<img class="weather__block-icon" src="assets/svg/cloud.svg" alt="cloud">
 				<div class="weather__block-content">
 					<p class="weather__block-content-city">Aktobe</p>
-					<img class="weather__block-content-like" src="" alt="like">
+					<img class="weather__block-content-like" src="assets/svg/Shape.svg" alt="">
 				</div>
 			</div>
 
 			<div class="weather__block weather__details" id="tab_02">
-				<p>2</p>
-
+				<p class="weather__details-title">Aktobe</p>
+				<ul class="list">
+					<li class="list__item">
+						Temperature: 14°
+					</li>
+					<li class="list__item">
+						Feels like: 10°
+					</li>
+					<li class="list__item">
+						Weather: Clouds
+					</li>
+					<li class="list__item">
+						Sunrise: 03:21
+					</li>
+					<li class="list__item">
+						Sunset: 18:54
+					</li>
+				</ul>
 			</div>
 
 			<div class="weather__block weather__forecast" id="tab_03">
-				<p>3</p>
+				<p class="weather__forecast-title">Aktobe</p>
+				<div class="weather__forecast-block">
+					<div class="block__title">
+						<p class="block__title-date">17 May</p>
+						<p class="block__title-time">12:00</p>
+					</div>
+					<div class="block__subtitle">
+						<p class="block__subtitle-temp">Temperature: 13°</p>
+						<p class="weather__subtitle-rain">Rain</p>
+					</div>
+					<div class="block__text">
+						<p class="block__text-feels">Feels like: 10°</p>
+						<img src="assets/svg/rain.svg" alt="rain" class="block__text-img">
+					</div>
+				</div>
+				<div class="weather__forecast-block">
+					<div class="block__title">
+						<p class="block__title-date">17 May</p>
+						<p class="block__title-time">15:00</p>
+					</div>
+					<div class="block__subtitle">
+						<p class="block__subtitle-temp">Temperature: 13°</p>
+						<p class="weather__subtitle-rain">Rain</p>
+					</div>
+					<div class="block__text">
+						<p class="block__text-feels">Feels like: 10°</p>
+						<img src="assets/svg/rain.svg" alt="rain" class="block__text-img">
+					</div>
+				</div>
+				<div class="weather__forecast-block">
+					<div class="block__title">
+						<p class="block__title-date">17 May</p>
+						<p class="block__title-time">18:00</p>
+					</div>
+					<div class="block__subtitle">
+						<p class="block__subtitle-temp">Temperature: 13°</p>
+						<p class="weather__subtitle-rain">Rain</p>
+					</div>
+					<div class="block__text">
+						<p class="block__text-feels">Feels like: 10°</p>
+						<img src="assets/svg/rain.svg" alt="rain" class="block__text-img">
+					</div>
+				</div>
 			</div>
 
 			<nav class="tabs__items">
@@ -46,7 +104,15 @@
 				<p>Added Locations:</p>
 			</div>
 			<div class="weather__location-save">
-				<p>Samara</p>
+				<ul class="list">
+					<li class="list__item">
+					<span class="list__item-city">Amur</span>
+					</li>
+					<li class="list__item">
+					<span class="list__item-city">Samara</span>
+					</li>
+					<!-- Остальные города в списке -->
+				</ul>
 				</div>
 		</div>
 	</div>
