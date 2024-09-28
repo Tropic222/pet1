@@ -213,6 +213,30 @@ form {
   color: #000000;
 }
 
+.list__item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list__item-remove {
+  padding: 5px 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #ff5c5c;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: auto; /* This will push the button to the right */
+}
+
+.list__item-remove:hover {
+  background-color: #e04b4b;
+  transform: scale(1.05);
+}
+
 
 .weather__forecast {
   height: 388.5px;

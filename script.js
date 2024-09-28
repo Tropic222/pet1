@@ -42,7 +42,7 @@ function addCityToList(cityName) {
 
     const removeButton = document.createElement('button');
     removeButton.classList.add('list__item-remove');
-    removeButton.textContent = 'Remove';
+    removeButton.textContent = '✖';
 
     
     removeButton.addEventListener('click', () => {
