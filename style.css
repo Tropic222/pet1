@@ -43,21 +43,47 @@ form {
   background: #F9F0DA;
   color: #9E9C9C;
 }
-.weather button {
+
+
+.buttonSearch {
   position: absolute; 
   top: 0;
-  right: 0px;
+  right: 0;
   width: 42px;
   height: 42px;
   border: none;
   background: #7BA7AB;
   cursor: pointer;
 }
-.weather button:before {
 
+
+.buttonSearch:before {
   font-family: FontAwesome;
   font-size: 16px;
-  color: #F9F0DA;
+
+}
+
+
+.tabs__item {
+  padding-top: 12px;
+  width: 99px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  border-right: 1px solid #000000;
+  background: #A3D0C3;
+  cursor: pointer;
+}
+
+.tabs__item:hover {
+  background-color: #7BA7AB;
+ 
 }
 
 .weather__block {
@@ -144,10 +170,9 @@ form {
 .weather__location-save {
   padding-top: 35px;
   padding-left: 18px;
-  
   overflow-y: auto;
   max-height: 200px;
-  list-style-type:  none;
+  list-style-type: none;
 }
 .weather__location-save .list {
   list-style: none;

@@ -12,20 +12,19 @@
 <div class="weather">
 	<form id="weatherForm">
 		<input type="text" id='input' placeholder="Search">
-		<button type="submit">&#128269;</button>
+		<button type="submit" class='buttonSearch'>&#128269;</button>
 	</form>
 	<div class="container">
 		<div class="tab">
 
 			<div class="weather__block" id="tab_01">
 				<p class="weather__block-temp">14°</p>
-				<img class="weather__block-icon" src="assets/svg/cloud.svg" alt="cloud">
+				<span class="weather__block-icon" src="" alt="cloud">&#9729;</span>
 				<div class="weather__block-content">
 					<p class="weather__block-content-city">Aktobe</p>
-					<img class="weather__block-content-like" src="assets/svg/Shape.svg" alt="">
+					<span class="weather__block-content-like">&#10084;</span>
 				</div>
 			</div>
-
 			<div class="weather__block weather__details" id="tab_02">
 				<p class="weather__details-title">Aktobe</p>
 				<ul class="list">
@@ -106,17 +105,19 @@
 			<div class="weather__location-save">
 				<ul class="list">
 					<li class="list__item">
-					<span class="list__item-city">Amur</span>
-					<!-- <button class="list__item-remove">Remove</button> -->
+						<div class="list__item-content">
+							<span class="list__item-city">Amur</span>
+							<button class="list__item-remove">Remove</button>
+						</div>
 					</li>
 					<li class="list__item">
-					<span class="list__item-city">Samara</span>
-					<!-- <button class="list__item-remove">Remove</button> -->
+						<div class="list__item-content">
+							<span class="list__item-city">Samara</span>
+							<button class="list__item-remove">Remove</button>
+						</div>
 					</li>
-					
 				</ul>
-				</div>
-		</div>
+			</div>
 	</div>
 </div>
 	<script src="./script.js" defer></script>
