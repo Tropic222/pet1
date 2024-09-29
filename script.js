@@ -9,7 +9,6 @@ const iconElement = document.querySelector('.weather__block-icon');
 const likeIcon = nowTab.querySelector('.weather__block-content-like');  
 const savedList = document.querySelector('.weather__location-save .list');
 
-
 weatherForm.addEventListener('submit', getData);
 
 function getData(event) {
@@ -21,28 +20,41 @@ function getData(event) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            const temperature = Math.round(data.main.temp);
-            const cityName = data.name;
-            const icon = data.weather[0].icon;
+            console.log('Ответ API:', data);
 
+            const temperature = Math.round(data.main.temp);
+            const feelsLike = Math.round(data.main.feels_like);
+            const weatherDescription = data.weather[0].description;
+            const icon = data.weather[0].icon;
+            const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+            const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+            const cityName = data.name;
+
+            
             nowTab.querySelector('.weather__block-temp').textContent = `${temperature}°`;
             nowTab.querySelector('.weather__block-content-city').textContent = cityName;
             iconElement.setAttribute('src', `http://openweathermap.org/img/w/${icon}.png`);
+
+            
+            const detailsTab = document.querySelector('#tab_02');
+            detailsTab.querySelector('.weather__details-title').textContent = cityName;
+            detailsTab.querySelectorAll('.list__item')[0].textContent = `Temperature: ${temperature}°`;
+            detailsTab.querySelectorAll('.list__item')[1].textContent = `Feels like: ${feelsLike}°`;
+            detailsTab.querySelectorAll('.list__item')[2].textContent = `Weather: ${weatherDescription.charAt(0).toUpperCase() + weatherDescription.slice(1)}`;
+            detailsTab.querySelectorAll('.list__item')[3].textContent = `Sunrise: ${sunrise}`;
+            detailsTab.querySelectorAll('.list__item')[4].textContent = `Sunset: ${sunset}`;
+
         })
         .catch(error => console.error('Ошибка:', error));
 }
 
-
-
 function addCityToList(cityName) {
+    if (favoriteCities.includes(cityName)) {
+        return;
+    }
 
-   if(favoriteCities.includes(cityName)) {
-    return;
-   }
-
-   favoriteCities.push(cityName)
-   
-
+    favoriteCities.push(cityName);
+    
     const listItem = document.createElement('li');
     listItem.classList.add('list__item');
 
@@ -59,16 +71,12 @@ function addCityToList(cityName) {
 
     removeButton.addEventListener('click', () => {
         savedList.removeChild(listItem); 
+        favoriteCities.splice(favoriteCities.indexOf(cityName), 1);
     });
 
-    removeButton.addEventListener('click', () => {
-        savedList.removeChild(listItem)
-        favoriteCities.splice(favoriteCities.indexOf(cityName), 1)
-    })
-
     citySpan.addEventListener('click', () => {
-        getData({ preventDefault: () => {} });  
         input.value = cityName;  
+        getData({ preventDefault: () => {} });
     });
 
     contentDiv.appendChild(citySpan);
