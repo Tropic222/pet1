@@ -32,6 +32,8 @@ function getData(event) {
         .catch(error => console.error('Ошибка:', error));
 }
 
+
+
 function addCityToList(cityName) {
 
    if(favoriteCities.includes(cityName)) {
@@ -63,6 +65,11 @@ function addCityToList(cityName) {
         savedList.removeChild(listItem)
         favoriteCities.splice(favoriteCities.indexOf(cityName), 1)
     })
+
+    citySpan.addEventListener('click', () => {
+        getData({ preventDefault: () => {} });  
+        input.value = cityName;  
+    });
 
     contentDiv.appendChild(citySpan);
     contentDiv.appendChild(removeButton);
