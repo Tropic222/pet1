@@ -126,6 +126,9 @@ form {
   height: 58px;
   margin-top: 40px;
   margin-left: 112px;
+  line-height: 100px;
+  font-size: 100px;
+  
 }
 .weather__block-content {
   margin-top: 98px;
@@ -141,6 +144,8 @@ form {
   height: 22px;
   margin-right: 26px;
   cursor: pointer;
+  font-size: 30px;
+  line-height: 28px;
 }
 .weather__block-content-city {
   margin-left: 12px;
@@ -171,9 +176,19 @@ form {
   padding-top: 35px;
   padding-left: 18px;
   overflow-y: auto;
-  max-height: 200px;
+  max-height: 324px;
   list-style-type: none;
 }
+
+.weather__location-save::-webkit-scrollbar {
+  width: 8px;
+}
+
+.weather__location-save::-webkit-scrollbar-thumb {
+  background-color: #7BA7AB; /* Цвет полосы прокрутки */
+  border-radius: 4px;
+}
+
 .weather__location-save .list {
   list-style: none;
   margin: 0;
@@ -217,6 +232,8 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  
 }
 
 .list__item-remove {
@@ -229,12 +246,13 @@ form {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-left: auto; /* This will push the button to the right */
+  margin-left: auto;
+  margin-right: 15px;
 }
 
 .list__item-remove:hover {
   background-color: #e04b4b;
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 
 
