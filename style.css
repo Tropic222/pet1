@@ -126,7 +126,6 @@ form {
   height: 100px;
   margin-top: 30px;
   margin-left: 112px;
-  
 }
 .weather__block-content {
   margin-top: 98px;
@@ -169,7 +168,7 @@ form {
   padding-left: 18px;
 }
 .weather__location-save {
-  padding-top: 35px;
+  padding-top: 10px;
   padding-left: 18px;
   overflow-y: auto;
   max-height: 324px;

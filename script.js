@@ -1,6 +1,6 @@
-
+const favoriteCities = [];
+console.log(favoriteCities)
 window.location.href = "#tab_01";
-
 
 const weatherForm = document.getElementById('weatherForm');
 const nowTab = document.querySelector('#tab_01');
@@ -33,6 +33,14 @@ function getData(event) {
 }
 
 function addCityToList(cityName) {
+
+   if(favoriteCities.includes(cityName)) {
+    return;
+   }
+
+   favoriteCities.push(cityName)
+   
+
     const listItem = document.createElement('li');
     listItem.classList.add('list__item');
 
@@ -50,6 +58,11 @@ function addCityToList(cityName) {
     removeButton.addEventListener('click', () => {
         savedList.removeChild(listItem); 
     });
+
+    removeButton.addEventListener('click', () => {
+        savedList.removeChild(listItem)
+        favoriteCities.splice(favoriteCities.indexOf(cityName), 1)
+    })
 
     contentDiv.appendChild(citySpan);
     contentDiv.appendChild(removeButton);
