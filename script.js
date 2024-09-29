@@ -36,6 +36,9 @@ function addCityToList(cityName) {
     const listItem = document.createElement('li');
     listItem.classList.add('list__item');
 
+    const contentDiv = document.createElement('div');
+    contentDiv.classList.add('list__item-content');
+
     const citySpan = document.createElement('span');
     citySpan.classList.add('list__item-city');
     citySpan.textContent = cityName;
@@ -44,13 +47,13 @@ function addCityToList(cityName) {
     removeButton.classList.add('list__item-remove');
     removeButton.textContent = '✖';
 
-    
     removeButton.addEventListener('click', () => {
         savedList.removeChild(listItem); 
     });
 
-    listItem.appendChild(citySpan);
-    listItem.appendChild(removeButton);
+    contentDiv.appendChild(citySpan);
+    contentDiv.appendChild(removeButton);
+    listItem.appendChild(contentDiv);
     savedList.appendChild(listItem); 
 }
 
