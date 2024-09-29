@@ -9,107 +9,61 @@
 </head>
 <body>
 	<div class="box">
-<div class="weather">
-	<form id="weatherForm">
-		<input type="text" id='input' placeholder="Search">
-		<button type="submit" class='buttonSearch'>&#128269;</button>
-	</form>
-	<div class="container">
-		<div class="tab">
+		<div class="weather">
+			<form id="weatherForm">
+				<input type="text" id='input' placeholder="Search">
+				<button type="submit" class='buttonSearch'>&#128269;</button>
+			</form>
+			<div class="container">
+				<div class="tab">
+					<div class="weather__block" id="tab_01">
+						<p class="weather__block-temp">14°</p>
+						<img class="weather__block-icon" src="http://openweathermap.org/img/w/01d.png" alt="cloud">
+						<div class="weather__block-content">
+							<p class="weather__block-content-city">Aktobe</p>
+							<span class="weather__block-content-like">&#10084;</span>
+						</div>
+					</div>
+					<div class="weather__block weather__details" id="tab_02">
+						<p class="weather__details-title">Aktobe</p>
+						<ul class="list">
+							<li class="list__item">
+								Temperature: 14°
+							</li>
+							<li class="list__item">
+								Feels like: 10°
+							</li>
+							<li class="list__item">
+								Weather: Clouds
+							</li>
+							<li class="list__item">
+								Sunrise: 03:21
+							</li>
+							<li class="list__item">
+								Sunset: 18:54
+							</li>
+						</ul>
+					</div>
 
-			<div class="weather__block" id="tab_01">
-				<p class="weather__block-temp">14°</p>
-				<img class="weather__block-icon" src="http://openweathermap.org/img/w/01d.png" alt="cloud">
-				<div class="weather__block-content">
-					<p class="weather__block-content-city">Aktobe</p>
-					<span class="weather__block-content-like">&#10084;</span>
+					<nav class="tabs__items">
+						<a href="#tab_01" class="tabs__item"><span class="tabs__item-color">Now</span></a>
+						<a href="#tab_02" class="tabs__item"><span>Details</span></a>
+					</nav>
 				</div>
-			</div>
-			<div class="weather__block weather__details" id="tab_02">
-				<p class="weather__details-title">Aktobe</p>
-				<ul class="list">
-					<li class="list__item">
-						Temperature: 14°
-					</li>
-					<li class="list__item">
-						Feels like: 10°
-					</li>
-					<li class="list__item">
-						Weather: Clouds
-					</li>
-					<li class="list__item">
-						Sunrise: 03:21
-					</li>
-					<li class="list__item">
-						Sunset: 18:54
-					</li>
-				</ul>
-			</div>
-
-			<div class="weather__block weather__forecast" id="tab_03">
-				<p class="weather__forecast-title">Aktobe</p>
-				<div class="weather__forecast-block">
-					<div class="block__title">
-						<p class="block__title-date">17 May</p>
-						<p class="block__title-time">12:00</p>
+				<div class="weather__location">
+					<div class="weather__location-add">
+						<p>Added Locations:</p>
 					</div>
-					<div class="block__subtitle">
-						<p class="block__subtitle-temp">Temperature: 13°</p>
-						<p class="weather__subtitle-rain">Rain</p>
-					</div>
-					<div class="block__text">
-						<p class="block__text-feels">Feels like: 10°</p>
-						<img src="assets/svg/rain.svg" alt="rain" class="block__text-img">
-					</div>
-				</div>
-				<div class="weather__forecast-block">
-					<div class="block__title">
-						<p class="block__title-date">17 May</p>
-						<p class="block__title-time">15:00</p>
-					</div>
-					<div class="block__subtitle">
-						<p class="block__subtitle-temp">Temperature: 13°</p>
-						<p class="weather__subtitle-rain">Rain</p>
-					</div>
-					<div class="block__text">
-						<p class="block__text-feels">Feels like: 10°</p>
-						<img src="assets/svg/rain.svg" alt="rain" class="block__text-img">
-					</div>
-				</div>
-				<div class="weather__forecast-block">
-					<div class="block__title">
-						<p class="block__title-date">17 May</p>
-						<p class="block__title-time">18:00</p>
-					</div>
-					<div class="block__subtitle">
-						<p class="block__subtitle-temp">Temperature: 13°</p>
-						<p class="weather__subtitle-rain">Rain</p>
-					</div>
-					<div class="block__text">
-						<p class="block__text-feels">Feels like: 10°</p>
-						<img src="assets/svg/rain.svg" alt="rain" class="block__text-img">
+					<div class="weather__location-save">
+						<ul class="list">
+							<li class="list__item">
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-
-			<nav class="tabs__items">
-				<a href="#tab_01" class="tabs__item"><span class="tabs__item-color">Now</a>
-				<a href="#tab_02" class="tabs__item"><span>Details</span></a>
-				<a href="#tab_03" class="tabs__item"><span>Forecast</span></a>
-			</nav>
 		</div>
-		<div class="weather__location">
-			<div class="weather__location-add">
-				<p>Added Locations:</p>
-			</div>
-			<div class="weather__location-save">
-				<ul class="list">
-					<li class="list__item">
-						
-				</ul>
-			</div>
 	</div>
-</div>
 	<script src="./script.js" defer></script>
 </body>
 </html>
